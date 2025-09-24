@@ -61,8 +61,8 @@ Route::get('/reimbursement/form', function () {
 })->name('reimbursement.form');
 
 Route::get('/surat', function () {
-    return view('surat');
-});
+    return view('surat.index');
+})->name('surat.index');
 
 Route::get('/akomodasi', function () {
     return view('akomodasi');

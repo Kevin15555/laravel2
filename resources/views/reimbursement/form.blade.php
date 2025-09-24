@@ -16,22 +16,22 @@
         </div>
 
         <div class="mb-3">
-          <label class="form-label">Departemen</label>
+          <label class="form-label">Nomor Pengembalian</label>
           <input type="text" class="form-control" placeholder="Masukkan departemen">
         </div>
 
         <div class="mb-3">
-          <label class="form-label">Tanggal Pengajuan</label>
+          <label class="form-label">Tanggal Pemakaian</label>
           <input type="date" class="form-control">
         </div>
 
         <div class="mb-3">
-          <label class="form-label">Jumlah Reimbursement</label>
+          <label class="form-label">Bank Account</label>
           <input type="number" class="form-control" placeholder="Contoh: 150000">
         </div>
 
         <div class="mb-3">
-          <label class="form-label">Deskripsi</label>
+          <label class="form-label">Detail Pengajuan</label>
           <textarea class="form-control" rows="3" placeholder="Contoh: Ganti biaya pembelian ATK"></textarea>
         </div>
 
