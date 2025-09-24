@@ -68,10 +68,6 @@ Route::get('/akomodasi', function () {
     return view('akomodasi');
 });
 
-Route::get('/outday/atasan', function () {
-    return view('outday.atasan');
-})->name('outday.atasan');
-
 Route::get('/dinas', function () {
     return view('dinas.dashboard');
 })->name('dinas.dashboard');
@@ -144,10 +140,6 @@ Route::get('/lembur', function () {
     return view('lembur.index');
 })->name('lembur.index');
 
-Route::get('/lembur/hrd', function () {
-    return view('lembur.hrd');
-});
-
 Route::get('/bpjs', function () {
     return view('bpjs.index'); 
 })->name('bpjs.index');
@@ -160,3 +152,7 @@ Route::get('/coa-master', function () {
 Route::get('/akomodasi', function () {
     return view('akomodasi.index');
 })->name('akomodasi.index');
+
+Route::get('/pettycash', function () {
+    return view('pettycash.index');
+})->name('pettycash.index');

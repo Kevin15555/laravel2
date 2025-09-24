@@ -159,10 +159,12 @@
         <div class="accordion-body">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="bi bi-cash-stack me-2"></i> Petty Cash
-                    </a>
-                </li>
+    <a class="nav-link {{ request()->routeIs('pettycash.index') ? 'active' : '' }}" 
+       href="{{ route('pettycash.index') }}">
+        <i class="bi bi-cash-stack me-2"></i> Petty Cash
+    </a>
+</li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="#">
                         <i class="bi bi-currency-dollar me-2"></i> Cash Flow
