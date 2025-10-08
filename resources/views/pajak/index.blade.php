@@ -28,11 +28,24 @@
                         <th>PPnBM</th>
                         <th>PBB</th>
                         <th>Iuran pajak</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr style="text-align:center;">
-                        <td colspan="6">-</td>
+                        <td>1</td>
+                        <td>100.000</td>
+                        <td>50.000</td>
+                        <td>30.000</td>
+                        <td>20.000</td>
+                        <td>200.000</td>
+                        <td>
+                            <button class="btn btn-success btn-sm me-1">Setuju</button>
+                            <button class="btn btn-danger btn-sm">Tolak</button>
+                        </td>
+                    </tr>
+                    <tr style="text-align:center;">
+                        <td colspan="7">-</td>
                     </tr>
                 </tbody>
             </table>

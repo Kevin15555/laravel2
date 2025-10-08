@@ -25,12 +25,28 @@
                         <th>Nama</th>
                         <th>Tanggal Lahir</th>
                         <th>Tgl Peserta</th>
-                        <th>Upah</th>
+                        <th>Iuran</th>
+                        <th>Aksi</th> <!-- Kolom aksi ditambahkan -->
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td colspan="8" class="text-center">-</td>
+                        <td>1</td>
+                        <td>1234567890</td>
+                        <td>987654321</td>
+                        <td>001</td>
+                        <td>John Doe</td>
+                        <td>01-01-1990</td>
+                        <td>01-01-2020</td>
+                        <td>500.000</td>
+                        <td>
+                            <button class="btn btn-success btn-sm me-1">Setuju</button>
+                            <button class="btn btn-danger btn-sm">Tolak</button>
+                        </td>
+                    </tr>
+                    <!-- Jika belum ada data -->
+                    <tr>
+                        <td colspan="9" class="text-center">-</td>
                     </tr>
                 </tbody>
             </table>

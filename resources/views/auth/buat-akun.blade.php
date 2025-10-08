@@ -12,71 +12,25 @@
       background-color: #f5f5f5;
       height: 100vh;
     }
-
-    .register-container {
-      display: flex;
-      height: 100vh;
-    }
-
+    .register-container { display: flex; height: 100vh; }
     .left-side {
-      background-color: #f36f21;
-      color: white;
-      width: 40%;
-      padding: 40px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+      background-color: #f36f21; color: white; width: 40%; padding: 40px;
+      display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
     }
-
-    .left-side h1 {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-
-    .left-side p {
-      font-size: 16px;
-    }
-
+    .left-side h1 { font-size: 32px; margin-bottom: 20px; }
+    .left-side p { font-size: 16px; }
     .right-side {
-      width: 60%;
-      padding: 50px;
-      background-color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      width: 60%; padding: 50px; background-color: white;
+      display: flex; flex-direction: column; justify-content: center;
     }
-
-    .form-label {
-      font-weight: 500;
-      font-size: 14px;
-    }
-
-    .form-control {
-      font-size: 14px;
-    }
-
+    .form-label { font-weight: 500; font-size: 14px; }
+    .form-control { font-size: 14px; }
     .btn-orange {
-      background-color: #f36f21;
-      color: white;
-      border: none;
-      padding: 8px 20px;
-      border-radius: 6px;
-      font-weight: bold;
-      font-size: 14px;
+      background-color: #f36f21; color: white; border: none;
+      padding: 8px 20px; border-radius: 6px; font-weight: bold; font-size: 14px;
     }
-
-    .btn-orange:hover {
-      background-color: #d85e1c;
-    }
-
-    .title-form {
-      margin-bottom: 30px;
-      font-size: 22px;
-      font-weight: bold;
-      color: #333;
-    }
+    .btn-orange:hover { background-color: #d85e1c; }
+    .title-form { margin-bottom: 30px; font-size: 22px; font-weight: bold; color: #333; }
   </style>
 </head>
 <body>
@@ -91,18 +45,18 @@
     <!-- Sisi Kanan -->
     <div class="right-side">
       <div class="title-form">Buat Akun</div>
-      <form method="POST" action="{{ route('buat-akun.store') }}">
+      <form method="POST" action="{{ route('buat-akun.store') }}" autocomplete="off">
         @csrf
         <div class="row">
           <!-- Kolom kiri -->
           <div class="col-md-6">
             <div class="mb-3">
               <label for="name" class="form-label">Nama</label>
-              <input type="text" class="form-control" id="name" name="name" required />
+              <input type="text" class="form-control" id="name" name="name" autocomplete="off" required />
             </div>
             <div class="mb-3">
               <label for="password" class="form-label">Password</label>
-              <input type="password" class="form-control" id="password" name="password" required />
+              <input type="password" class="form-control" id="password" name="password" autocomplete="new-password" required />
             </div>
           </div>
 

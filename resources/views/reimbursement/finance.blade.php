@@ -24,10 +24,12 @@
                     <tr>
                         <th class="bg-orange">No</th>
                         <th class="bg-orange">Nama</th>
+                        <th class="bg-orange">Jabatan</th>
                         <th class="bg-orange">Nomor Pengembalian</th>
                         <th class="bg-orange">Tanggal Pemakaian</th>
                         <th class="bg-orange">Bank Account</th>
                         <th class="bg-orange">Detail dan Bukti Pengajuan</th>
+                        <th class="bg-orange">Status</th>
                         <th class="bg-orange">Aksi</th>
                     </tr>
                 </thead>
@@ -35,16 +37,15 @@
                     <tr>
                         <td>1</td>
                         <td>Budi</td>
+                        <td>Staff</td>
                         <td>RBM-001</td>
                         <td>2025-09-26</td>
-                        <td>123456789</td>
+                        <td>BCA</td>
                         <td>Transportasi Dinas</td>
+                        <td><span class="badge bg-success">Telah Disetujui</span></td>
                         <td>
-                            <button class="btn btn-success btn-sm me-1">
-                                <i class="bi bi-check-circle"></i> Setuju
-                            </button>
-                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalTolak">
-                                <i class="bi bi-x-circle"></i> Tolak
+                            <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#modalVerifikasi">
+                                <i class="bi bi-check2-square"></i> Verifikasi
                             </button>
                         </td>
                     </tr>
@@ -54,21 +55,33 @@
     </div>
 </div>
 
-{{-- Modal Penolakan --}}
-<div class="modal fade" id="modalTolak" tabindex="-1">
-  <div class="modal-dialog">
+{{-- Modal Verifikasi --}}
+<div class="modal fade" id="modalVerifikasi" tabindex="-1">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content rounded-3">
       <div class="modal-header bg-orange text-white">
-        <h5 class="modal-title">Alasan Penolakan</h5>
+        <h5 class="modal-title">Verifikasi Reimbursement</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
         <form>
           <div class="mb-3">
-            <label class="form-label">Tambahkan komentar penolakan</label>
-            <textarea class="form-control" rows="3" placeholder="Tuliskan alasan..."></textarea>
+            <label class="form-label">Nomor Pengembalian</label>
+            <input type="text" class="form-control" value="RBM-001" readonly>
           </div>
-          <button type="submit" class="btn btn-danger w-100">Kirim Penolakan</button>
+          <div class="mb-3">
+            <label class="form-label">Tanggal Transfer</label>
+            <input type="date" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Upload Bukti Transfer</label>
+            <input type="file" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Catatan</label>
+            <textarea class="form-control" rows="3" placeholder="Tambahkan catatan..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Simpan Verifikasi</button>
         </form>
       </div>
     </div>

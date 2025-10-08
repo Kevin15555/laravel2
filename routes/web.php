@@ -24,9 +24,10 @@ Route::get('/register', function () {
     return view('auth.register');
 })->name('register');
 
-Route::get('/karyawan/direksi', function () {
-    return view('karyawan.direksi'); 
-})->name('karyawan.direksi');
+Route::get('/karyawan', function () {
+    return view('karyawan.index');
+})->name('karyawan.index');
+
 
 Route::get('/absensi', function () {
     return view('absensi.absensi');
@@ -49,8 +50,8 @@ Route::get('/pengajuan', function () {
 })->name('pengajuan');
 
 Route::get('/outday', function () {
-    return view('outday.karyawan');
-})->name('outday.karyawan');
+    return view('outday.hr');
+})->name('outday.hr');
 
 Route::get('/reimbursement', function () {
     return view('reimbursement.index');
@@ -97,24 +98,6 @@ Route::get('/npd/export', function () {
 Route::get('/npd/export/confirm', function () {
     return view('npd.export-confirm');
 });
-Route::get('/npd_karyawan/karyawan', function () {
-    return view('npd_karyawan.karyawan');
-});
-
-Route::get('/npd_karyawan/form', function () {
-    return view('npd_karyawan.form');
-});
-Route::get('/npd_karyawan/draft', function () {
-    return view('npd_karyawan.draft');
-});
-Route::get('/npd_karyawan/realisasi', function () {
-    return view('npd_karyawan.realisasi');
-});
-
-Route::get('/bpjs', function () {
-    return view('bpjs.index');
-})->name('bpjs.index');
-
 
 Route::get('/pajak', function () {
     return view('pajak.index');
@@ -156,3 +139,32 @@ Route::get('/akomodasi', function () {
 Route::get('/pettycash', function () {
     return view('pettycash.index');
 })->name('pettycash.index');
+
+
+Route::get('/lembur/finance', function () {
+    return view('lembur.finance');
+});
+
+    Route::get('/reimbursement/finance', function () {
+        return view('reimbursement.finance');
+    });
+
+Route::get('/coa-master/finance', function () {
+    return view('coa-master.finance');
+});
+Route::get('/pettycash/finance', function () {
+    return view('pettycash.finance');
+});
+Route::get('/bpjs/finance', function () {
+    return view('bpjs.finance');
+});
+Route::get('/pajak/finance', function () {
+    return view('pajak.finance');
+});
+
+Route::get('/slipgaji/finance', function () {
+    return view('slipgaji.finance'); // sesuai folder & file
+}); 
+Route::get('/slipgaji', function() {
+    return view('slipgaji.index'); // folder.nama_file
+});

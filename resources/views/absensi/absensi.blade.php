@@ -4,13 +4,11 @@
 
 @section('content')
 <style>
-    /* Warna orange */
     :root {
         --orange: #f97316;
         --orange-dark: #e3620e;
     }
 
-    /* Card header */
     .card-header-orange {
         background-color: var(--orange);
         color: #fff;
@@ -19,7 +17,6 @@
         border-bottom: 1px solid var(--orange-dark);
     }
 
-    /* Tombol orange */
     .btn-orange {
         background-color: var(--orange);
         color: #fff;
@@ -40,10 +37,11 @@
         color: #fff;
     }
 
-    /* Teks orange */
-    .text-orange { color: var(--orange); font-weight: 500; }
+    .text-orange { 
+        color: var(--orange); 
+        font-weight: 500; 
+    }
 
-    /* Tabel header orange */
     .table thead {
         background-color: var(--orange);
         color: #fff;
@@ -59,7 +57,7 @@
         <div class="d-flex mb-3 gap-2">
             <input type="text" class="form-control" placeholder="Nama Karyawan">
             <select class="form-select">
-                <option>Departemen</option>
+                <option>Jabatan</option>
             </select>
             <select class="form-select">
                 <option>Lokasi</option>
@@ -78,7 +76,7 @@
                 <tr>
                     <th>No</th>
                     <th>Nama</th>
-                    <th>Departemen</th>
+                    <th>Jabatan</th>
                     <th>Lokasi</th>
                     <th>Jam</th>
                     <th>Tanggal</th>
@@ -89,20 +87,16 @@
                 <tr>
                     <td>1</td>
                     <td>Budi Santoso</td>
-                    <td>IT</td>
-                    <td class="text-orange">Sharelife</td>
+                    <td>Karyawan</td>
+                    <td>
+                        <img src="{{ asset('images/maps.jpg') }}" 
+                             alt="Map Sharelife" 
+                             width="120" height="80" 
+                             style="border-radius:6px; object-fit:cover;">
+                    </td>
                     <td>08:00</td>
                     <td>23-09-2025</td>
                     <td class="text-orange">Hadir</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Siti Aminah</td>
-                    <td>Finance</td>
-                    <td class="text-orange">Sharelife</td>
-                    <td>08:15</td>
-                    <td>23-09-2025</td>
-                    <td class="text-orange">Terlambat</td>
                 </tr>
             </tbody>
         </table>

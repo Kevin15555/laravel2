@@ -31,17 +31,17 @@
 <div class="container py-4">
   <div class="card card-custom">
     <h3 class="text-orange mb-4"><i class="bi bi-geo-alt me-2"></i>Daftar Akomodasi</h3>
-    <p>Berikut ini daftar akomodasi yang tersedia atau telah digunakan:</p>
+    <p>Berikut ini daftar akomodasi</p>
 
     <div class="table-responsive mt-3">
       <table class="table table-bordered table-hover align-middle">
         <thead class="text-center">
           <tr>
-            <th>No</th>
-            <th>Nama Tempat</th>
-            <th>Lokasi</th>
-            <th>Tanggal Mulai</th>
-            <th>Tanggal Selesai</th>
+            <th>Nama</th>
+            <th>Jadwal Kegiatan</th>
+            <th>Transportasi</th>
+            <th>Akomodasi Yang Dipesan</th>
+            <th>Kontak PIC</th>
             <th>Status</th>
           </tr>
         </thead>
