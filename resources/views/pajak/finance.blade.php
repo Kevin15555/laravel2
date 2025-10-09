@@ -4,57 +4,41 @@
 
 @section('content')
 <div class="container mt-4">
-    <h4 style="color:#ff6600;" class="fw-bold mb-3">Pajak - Perusahaan</h4>
+    <h4 class="fw-bold text-orange mb-3">
+        <i class="bi bi-cash-stack"></i> Pajak - Perusahaan
+    </h4>
 
-    <!-- Tombol -->
-    <div class="mb-3">
-        <button style="background-color:#ff6600;color:#fff;font-weight:500;border:none;padding:6px 12px;margin-right:8px;">
-            Bukti
-        </button>
-        <button style="background-color:#ff6600;color:#fff;font-weight:500;border:none;padding:6px 12px;margin-right:8px;">
-            Select Approve
-        </button>
-        <!-- Tombol Tambah Pegawai Baru -->
-        <button type="button" class="btn" 
-            style="background-color:#ff6600;color:#fff;font-weight:500;border:none;padding:6px 12px;margin-right:8px;"
-            data-bs-toggle="modal" data-bs-target="#tambahPegawaiModal">
-            Tambah Pegawai Baru
-        </button>
-        <!-- Tombol Input Pajak Perusahaan Baru -->
-        <button type="button" class="btn"
-            style="background-color:#ff6600;color:#fff;font-weight:500;border:none;padding:6px 12px;"
-            data-bs-toggle="modal" data-bs-target="#inputPajakModal">
-            Input Pajak Perusahaan Baru
+    <!-- Tombol Input Pajak -->
+    <div class="mb-3 d-flex justify-content-end">
+        <button class="btn btn-orange" data-bs-toggle="modal" data-bs-target="#inputPajakModal">
+       Input Form Pajak
         </button>
     </div>
 
-    <!-- Tabel -->
-    <div class="card shadow-sm">
+    <!-- Tabel Pajak -->
+    <div class="card shadow-sm border-0">
         <div class="card-body p-0">
-            <table class="table table-bordered mb-0">
-                <thead style="background-color:#ff6600;color:#fff;">
+            <table class="table table-bordered table-hover align-middle text-center mb-0">
+                <thead class="bg-orange text-white">
                     <tr>
                         <th>No</th>
-                        <th>PPh</th>
-                        <th>PPN</th>
-                        <th>PPnBM</th>
-                        <th>PBB</th>
-                        <th>Iuran pajak</th>
-                        <th>Aksi</th>
+                        <th>Jenis Pajak</th>
+                        <th>Bulan</th>
+                        <th>Tahun</th>
+                        <th>Nominal Iuran</th>
+                        <th>Keterangan</th>
+                        <th>Upload Data</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr style="text-align:center;">
+                    <tr>
                         <td>1</td>
-                        <td>100.000</td>
-                        <td>50.000</td>
-                        <td>30.000</td>
-                        <td>20.000</td>
-                        <td>200.000</td>
-                        <td>-</td>
-                    </tr>
-                    <tr style="text-align:center;">
-                        <td colspan="7">-</td>
+                        <td>PPh 21</td>
+                        <td>9</td>
+                        <td>2025</td>
+                        <td>Rp 10.000.000</td>
+                        <td>Pajak karyawan bulan September</td>
+                        <td><span class="badge bg-warning text-dark">Menunggu</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -62,79 +46,72 @@
     </div>
 </div>
 
-<!-- Modal Tambah Pegawai Baru -->
-<div class="modal fade" id="tambahPegawaiModal" tabindex="-1" aria-labelledby="tambahPegawaiLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header" style="background-color:#ff6600;color:#fff;">
-        <h5 class="modal-title" id="tambahPegawaiLabel">Tambah Pegawai Baru</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <form action="#" method="POST">
-        <div class="modal-body">
-            <div class="mb-3">
-                <label for="nama" class="form-label">NIK</label>
-                <input type="text" class="form-control border-orange" id="nama" name="nama" required>
-            </div>
-            <div class="mb-3">
-                <label for="nik" class="form-label">Nama</label>
-                <input type="text" class="form-control border-orange" id="nik" name="nik" required>
-            </div>
-            <div class="mb-3">
-                <label for="departemen" class="form-label">Jabatan</label>
-                <input type="text" class="form-control border-orange" id="departemen" name="departemen" required>
-            </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-          <button type="submit" class="btn" style="background-color:#ff6600;color:#fff;">Simpan</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-
 <!-- Modal Input Pajak Perusahaan Baru -->
 <div class="modal fade" id="inputPajakModal" tabindex="-1" aria-labelledby="inputPajakLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header" style="background-color:#ff6600;color:#fff;">
-        <h5 class="modal-title" id="inputPajakLabel">Input Pajak Perusahaan Baru</h5>
+      <div class="modal-header bg-orange text-white">
+        <h5 class="modal-title" id="inputPajakLabel">Input Form Pajak</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+
       <form action="#" method="POST">
         <div class="modal-body">
-            <div class="mb-3">
-                <label for="nik" class="form-label">NIK</label>
-                <input type="text" class="form-control border-orange" id="nik" name="nik" required>
-            </div>
-            <div class="mb-3">
-                <label for="nama" class="form-label">Nama</label>
-                <input type="text" class="form-control border-orange" id="nama" name="nama" required>
-            </div>
-            <div class="mb-3">
-                <label for="pajak" class="form-label">Pajak</label>
-                <select class="form-select select2 border-orange" id="pajak" name="pajak" required style="width: 100%;">
-                    <option value="">Pilih atau ketik jenis pajak...</option>
-                    <option value="PPh 21">PPh 21</option>
-                    <option value="PPh 22">PPh 22</option>
-                    <option value="PPh 23">PPh 23</option>
-                    <option value="PPh 25">PPh 25</option>
-                    <option value="PPN">PPN (Pajak Pertambahan Nilai)</option>
-                    <option value="PPnBM">PPnBM (Pajak Penjualan atas Barang Mewah)</option>
-                    <option value="PBB">PBB (Pajak Bumi dan Bangunan)</option>
-                    <option value="Pajak Penghasilan Badan">Pajak Penghasilan Badan</option>
-                    <option value="Pajak Penghasilan Final">Pajak Penghasilan Final</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="iuran" class="form-label">Iuran Pajak</label>
-                <input type="number" class="form-control border-orange" id="iuran" name="iuran" required>
-            </div>
+          <div class="mb-3">
+              <label class="form-label">Jenis Pajak</label>
+              <select class="form-select select2 border-orange" required>
+                  <option value="">Pilih atau ketik jenis pajak...</option>
+                  <option>PPh 21</option>
+                  <option>PPh 22</option>
+                  <option>PPh 23</option>
+                  <option>PPh 25</option>
+                  <option>PPN</option>
+                  <option>PPnBM</option>
+                  <option>PBB</option>
+                  <option>Pajak Penghasilan Badan</option>
+                  <option>Pajak Penghasilan Final</option>
+              </select>
+          </div>
+
+          <div class="mb-3">
+              <label class="form-label">Bulan</label>
+              <select class="form-select border-orange" required>
+                  <option value="">Pilih Bulan...</option>
+                  @for ($i = 1; $i <= 12; $i++)
+                      <option value="{{ $i }}">{{ $i }}</option>
+                  @endfor
+              </select>
+          </div>
+
+          <div class="mb-3">
+              <label class="form-label">Tahun</label>
+              <select class="form-select border-orange" required>
+                  <option value="">Pilih Tahun...</option>
+                  @for ($t = 2001; $t <= 2025; $t++)
+                      <option value="{{ $t }}">{{ $t }}</option>
+                  @endfor
+              </select>
+          </div>
+
+          <div class="mb-3">
+              <label class="form-label">Nominal Iuran</label>
+              <input type="text" class="form-control border-orange" required>
+          </div>
+
+          <div class="mb-3">
+              <label class="form-label">Keterangan (Opsional)</label>
+              <input type="text" class="form-control border-orange">
+          </div>
+
+          <div class="mb-3">
+              <label class="form-label">Upload Data (Opsional)</label>
+              <input type="file" class="form-control border-orange">
+          </div>
         </div>
+
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-          <button type="submit" class="btn" style="background-color:#ff6600;color:#fff;">Simpan</button>
+          <button type="submit" class="btn btn-orange">Simpan</button>
         </div>
       </form>
     </div>
@@ -145,24 +122,46 @@
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
-<!-- Inisialisasi Select2 -->
 <script>
 $(document).ready(function() {
     $('.select2').select2({
         dropdownParent: $('#inputPajakModal'),
         placeholder: "Pilih atau ketik jenis pajak...",
-        allowClear: true,
-        width: 'resolve'
+        allowClear: true
     });
 });
 </script>
 
-<!-- Style Border Input -->
+@push('styles')
 <style>
-.border-orange:focus {
-    border-color: #ff6600 !important;
-    box-shadow: 0 0 4px #ff6600 !important;
-}
+    .text-orange { color: #ff6600 !important; }
+    .bg-orange { background-color: #ff6600 !important; color: white !important; }
+
+    .btn-orange {
+        background-color: #ff6600;
+        color: #fff;
+        font-weight: 500;
+        border: none;
+    }
+    .btn-orange:hover { background-color: #e65c00; }
+
+    .border-orange:focus {
+        border-color: #ff6600 !important;
+        box-shadow: 0 0 4px #ff6600 !important;
+    }
+
+    thead th {
+        background-color: #ff6600 !important;
+        color: white !important;
+    }
+
+    tbody tr:hover td {
+        background-color: #fff3e5 !important;
+    }
+
+    .modal-header h5 {
+        font-weight: 600;
+    }
 </style>
+@endpush
 @endsection
