@@ -57,10 +57,16 @@
         <div class="d-flex mb-3 gap-2">
             <input type="text" class="form-control" placeholder="Nama Karyawan">
             <select class="form-select">
-                <option>Jabatan</option>
+                <option selected>Jabatan</option>
+                <option>PIC</option>
+                <option>HR</option>
+                <option>Karyawan</option>
             </select>
             <select class="form-select">
-                <option>Lokasi</option>
+                <option selected>Status Kehadiran</option>
+                <option>WFO</option>
+                <option>WFH</option>
+                <option>WFA</option>
             </select>
         </div>
 
@@ -93,10 +99,11 @@
                              alt="Map Sharelife" 
                              width="120" height="80" 
                              style="border-radius:6px; object-fit:cover;">
+                        <div class="small text-muted mt-1 text-center">Sharelife</div>
                     </td>
                     <td>08:00</td>
                     <td>23-09-2025</td>
-                    <td class="text-orange">Hadir</td>
+                    <td class="text-orange">WFO</td>
                 </tr>
             </tbody>
         </table>
