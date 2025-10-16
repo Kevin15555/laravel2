@@ -165,6 +165,32 @@ Route::get('/pajak/finance', function () {
 Route::get('/slipgaji/finance', function () {
     return view('slipgaji.finance'); // sesuai folder & file
 }); 
-Route::get('/slipgaji', function() {
-    return view('slipgaji.index'); // folder.nama_file
+Route::get('/slip-gaji', function () {
+    return view('slipgaji.index');
 });
+
+Route::get('/bpjskesehatan', function () {
+    return view('bpjskesehatan.index');
+});
+
+Route::get('/bpjskesehatan/finance', function () {
+    return view('bpjskesehatan.finance');
+});
+// Halaman Approve/Reject HR
+Route::view('/lembur', 'lembur.index')->name('lembur.index');
+
+// Dashboard
+Route::view('/lembur/dashboard', 'lembur.dashboard')->name('hr.dashboard');
+
+Route::view('/lembur/dashboard-finance', 'lembur.dashboard-finance')->name('finance.dashboard');
+// Dashboard HR Out Day
+Route::view('/outday/dashboard', 'outday.outday-dashboard')->name('outday.dashboard');
+
+// Halaman Approve/Reject HR Out Day
+Route::view('/outday', 'outday.index')->name('outday.index');
+
+
+Route::view('/dashboard/outday', 'outday.outday-dashboard');
+
+// Lembur
+Route::view('/dashboard/lembur', 'lembur.dashboard');
