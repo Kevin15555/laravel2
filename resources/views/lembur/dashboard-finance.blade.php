@@ -1,11 +1,11 @@
 @extends('layout')
 
-@section('title', 'Lemburan')
+@section('title', 'Lemburan Dashboard')
 
 @section('content')
 <div class="container mt-4">
     <h2 class="mb-4 text-orange">
-        <i class="bi bi-clock-history"></i> Lembur
+        <i class="bi bi-clock-history"></i> Lemburan Dashboard
     </h2>
 
     <!-- Filter Status -->
@@ -18,10 +18,10 @@
         </select>
     </div>
 
-    <!-- Tabel Approval -->
+    <!-- Tabel Dashboard -->
     <div class="card shadow-sm border-0">
         <div class="card-header bg-orange text-white fw-bold">
-      Detail Lemburan
+            Data Lemburan
         </div>
         <div class="card-body p-0">
             <table class="table table-bordered table-striped text-center align-middle mb-0">
@@ -37,11 +37,10 @@
                         <th>Deskripsi Pekerjaan</th>
                         <th>Alasan</th>
                         <th>Status</th>
-                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr onclick="window.location.href='/lembur';" style="cursor:pointer;">
                         <td>Andi Saputra</td>
                         <td>Staff Finance</td>
                         <td>2025-09-25</td>
@@ -51,22 +50,10 @@
                         <td>Hari Kerja</td>
                         <td>Menyelesaikan laporan bulanan</td>
                         <td>Deadline mendesak</td>
-                        <td>
-                            <span class="badge bg-warning text-dark">Menunggu</span>
-                        </td>
-                        <td>
-                            <div class="d-flex justify-content-center gap-1">
-                                <button class="btn btn-success btn-xs px-2 py-1">
-                                    <i class="bi bi-check-circle"></i>
-                                </button>
-                                <button class="btn btn-danger btn-xs px-2 py-1">
-                                    <i class="bi bi-x-circle"></i>
-                                </button>
-                            </div>
-                        </td>
+                        <td><span class="badge bg-warning text-dark">Menunggu</span></td>
                     </tr>
                     <tr>
-                        <td colspan="11" class="text-muted">Belum ada data lain.</td>
+                        <td colspan="10" class="text-muted">Belum ada data lain.</td>
                     </tr>
                 </tbody>
             </table>
@@ -79,22 +66,6 @@
 <style>
 .text-orange { color: #FF7F50 !important; }
 .bg-orange { background-color: #FF7F50 !important; color: white; }
-
-.btn-xs {
-    font-size: 0.75rem;
-    padding: 2px 6px !important;
-    border-radius: 4px;
-}
-
-.btn-orange { 
-    background-color: #FF7F50; 
-    color: white; 
-    border: 1px solid #FF7F50;
-}
-.btn-orange:hover {
-    background-color: #e76b3c;
-    border-color: #e76b3c;
-    color: white;
-}
+.table tbody tr:hover { background-color: #fff3e0; cursor: pointer; }
 </style>
 @endpush

@@ -27,11 +27,15 @@
             <table class="table table-bordered text-center align-middle">
                 <thead class="bg-orange text-white">
                     <tr>
-                        <th>Nama Karyawan</th>
-                        <th>Tanggal</th>
+                        <th>Nama</th>
+                        <th>Jabatan</th>
+                        <th>Tanggal Lembur</th>
                         <th>Jam Mulai</th>
                         <th>Jam Selesai</th>
-                        <th>Yang Dikerjakan</th>
+                        <th>Durasi</th>
+                        <th>Jenis Hari</th>
+                        <th>Deskripsi Pekerjaan</th>
+                        <th>Alasan</th>
                         <th>Status</th>
                         <th>Aksi</th>
                     </tr>
@@ -39,10 +43,14 @@
                 <tbody>
                     <tr>
                         <td>Andi Saputra</td>
+                        <td>Staff Keuangan</td>
                         <td>25-09-2025</td>
                         <td>18:00</td>
                         <td>21:00</td>
+                        <td>3 Jam</td>
+                        <td>Hari Kerja</td>
                         <td>Menyelesaikan laporan bulanan</td>
+                        <td>Deadline mendesak</td>
                         <td>
                             <span class="badge bg-success">Disetujui</span>
                         </td>
@@ -73,11 +81,11 @@
                         <input type="text" class="form-control" value="Andi Saputra" readonly>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Tanggal</label>
+                        <label class="form-label">Tanggal Bayar</label>
                         <input type="text" class="form-control" value="25-09-2025" readonly>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Jumlah Dibayar</label>
+                        <label class="form-label">Nominal Dibayar</label>
                         <input type="text" class="form-control" value="Rp 500.000" readonly>
                     </div>
                     <div class="mb-3">
